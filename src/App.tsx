@@ -1,4 +1,5 @@
 import { IoMdMore } from "react-icons/io";
+import Modal from "./components/Modal";
 
 function App() {
   return (
@@ -11,10 +12,7 @@ function App() {
             <p className="text-gray-800">Manage and track project issues</p>
           </div>
         </div>
-        <button className="bg-black text-white px-6 py-2 rounded flex items-center gap-2 hover:bg-gray-800 cursor-pointer hover:scale-105 transition duration-300">
-          <span>+</span>
-          <span>Add Issue</span>
-        </button>
+        <Modal name="+ Add Issue">{(onClose) => <>FORM</>}</Modal>
       </div>
 
       {/* Filter section */}
@@ -24,20 +22,11 @@ function App() {
             <label htmlFor="status" className="font-medium">
               Filter by Status:
             </label>
-            <select
-              id="status"
-              className=" border-gray-300 rounded px-2 py-1"
-            >
-              <option
-                className=" text-gray-800 font-semibold"
-                value="all"
-              >
+            <select id="status" className=" border-gray-300 rounded px-2 py-1">
+              <option className=" text-gray-800 font-semibold" value="all">
                 All
               </option>
-              <option
-                className=" text-gray-800 font-semibold"
-                value="open"
-              >
+              <option className=" text-gray-800 font-semibold" value="open">
                 Open
               </option>
               <option
@@ -46,10 +35,7 @@ function App() {
               >
                 In Progress
               </option>
-              <option
-                className=" text-gray-800 font-semibold"
-                value="closed"
-              >
+              <option className=" text-gray-800 font-semibold" value="closed">
                 Closed
               </option>
             </select>
@@ -62,28 +48,16 @@ function App() {
               id="priority"
               className=" border-gray-300 rounded px-2 py-1"
             >
-              <option
-                className=" text-gray-800 font-semibold"
-                value="all"
-              >
+              <option className=" text-gray-800 font-semibold" value="all">
                 All
               </option>
-              <option
-                className=" text-gray-800 font-semibold"
-                value="low"
-              >
+              <option className=" text-gray-800 font-semibold" value="low">
                 Low
               </option>
-              <option
-                className=" text-gray-800 font-semibold"
-                value="medium"
-              >
+              <option className=" text-gray-800 font-semibold" value="medium">
                 Medium
               </option>
-              <option
-                className=" text-gray-800 font-semibold"
-                value="high"
-              >
+              <option className=" text-gray-800 font-semibold" value="high">
                 High
               </option>
             </select>
@@ -99,7 +73,6 @@ function App() {
 
       {/* Issues List */}
       <div className="p-4 space-y-4">
-        {/* Example Issue Card */}
         <div className="border border-gray-300 p-4 bg-white shadow rounded-2xl flex flex-col gap-2 cursor-default">
           <div className="flex justify-between items-center">
             <h3 className="font-bold">
@@ -117,7 +90,7 @@ function App() {
             fuga possimus at facilis tempora saepe quae ipsam repellendus.
           </p>
           <p>
-            Created at: <span>{"26 Aug 2025"}</span>
+            Created at: <span>{"26-Aug-2025"}</span>
           </p>
         </div>
       </div>
