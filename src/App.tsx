@@ -1,5 +1,5 @@
-import { IoMdMore } from "react-icons/io";
 import Modal from "./components/Modal";
+import IssueCard from "./components/IssueCard";
 
 function App() {
   return (
@@ -73,26 +73,9 @@ function App() {
 
       {/* Issues List */}
       <div className="p-4 space-y-4">
-        <div className="border border-gray-300 p-4 bg-white shadow rounded-2xl flex flex-col gap-2 cursor-default">
-          <div className="flex justify-between items-center">
-            <h3 className="font-bold">
-              This is an issue This is an issue This is an issue
-            </h3>
-            <IoMdMore className="text-2xl cursor-pointer" />
-          </div>
-
-          <div className="grid grid-cols-2 w-[150px] gap-2">
-            <p className="border text-center rounded-2xl py-0.5"> Open</p>
-            <p className="border text-center rounded-2xl py-0.5"> High</p>
-          </div>
-          <p className="mt-2 text-gray-700">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            fuga possimus at facilis tempora saepe quae ipsam repellendus.
-          </p>
-          <p>
-            Created at: <span>{"26-Aug-2025"}</span>
-          </p>
-        </div>
+        <IssueCard />
+        <IssueCard />
+        <IssueCard />
       </div>
     </div>
   );
